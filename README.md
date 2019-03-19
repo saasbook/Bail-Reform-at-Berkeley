@@ -1,8 +1,24 @@
-# Bail-Reform-at-Berkeley
-http://bail-reform-at-berkeley.herokuapp.com/
+# README
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/e8e59eb80fcda394fd99/maintainability)](https://codeclimate.com/github/ariknny/Bail-Reform-at-Berkeley/maintainability)
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-[![Test Coverage](https://api.codeclimate.com/v1/badges/e8e59eb80fcda394fd99/test_coverage)](https://codeclimate.com/github/ariknny/Bail-Reform-at-Berkeley/test_coverage)
+Things you may want to cover:
 
-[![Build Status](https://travis-ci.com/ariknny/Bail-Reform-at-Berkeley.svg?branch=master)](https://travis-ci.com/ariknny/Bail-Reform-at-Berkeley)
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
