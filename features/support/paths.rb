@@ -14,6 +14,7 @@ module NavigationHelpers
     case page_name
 
     when /^the (Bail Reform at Berkeley )?home\s?page$/ then '/'
+    when /^the (Bail Reform at Berkeley )?donate page$/ then new_donation_path
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
