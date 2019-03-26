@@ -6,4 +6,19 @@ class DonateControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "should get create" do
+    get create_donation_path("123", "500")
+    assert_response :redirect
+  end
+
+  test "should get success" do
+    get successful_donation_path
+    assert_response :success
+  end
+
+  test "should get failure" do
+    get failed_donation_path
+    assert_response :success
+  end
+
 end
