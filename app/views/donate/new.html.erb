@@ -1,1 +1,74 @@
+<script src="https://checkout.stripe.com/checkout.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <h1>Donate</h1>
+
+<form id="form">
+    <p>
+        <label for="amount">Enter amount</label>
+        <div class="flex">
+            <span class="currency">$</span>
+            <input id="amount" name="amount" type="text" maxlength="15" />
+        </div>
+    </p>
+    <button id="customButton">Pay with Card</button>
+</form>
+
+<script>
+(function($, undefined) {
+    "use strict";
+    $(function() {
+        var $form = $( "#form" );
+        var $input = $form.find( "input" );
+        $input.on( "keyup", function( event ) {
+
+            var selection = window.getSelection().toString();
+            if ( selection !== '' ) {
+                return;
+            }
+            if ( $.inArray( event.keyCode, [38,40,37,39] ) !== -1 ) {
+                return;
+            }
+
+            var $this = $( this );
+            var input = $this.val();
+            var input = input.replace(/[\D\s\._\-]+/g, "");
+                    input = input ? parseInt( input, 10 ) : 0;
+                    $this.val( function() {
+                        return ( input === 0 ) ? "" : input.toLocaleString( "en-US" );
+                    } );
+        } );
+    });
+})(jQuery);
+</script>
+<script>
+var amt;
+
+var handler = StripeCheckout.configure({
+  key: 'pk_test_TYooMQauvdEDq54NiTphI7jx',
+  image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
+  locale: 'auto',
+  token: function(token) {
+    location.replace("/donate/" + token.id + "/" + amt);
+    // You can access the token ID with `token.id`.
+    // Get the token ID to your server-side code for use.
+  }
+});
+
+document.getElementById('customButton').addEventListener('click', function(e) {
+  // Open Checkout with further options:
+  amt = document.getElementById('amount').value;
+  amt = amt.replace(/[^0-9]/g, '') + "00";
+  handler.open({
+    name: 'Stripe.com',
+    description: '',
+    zipCode: true,
+    amount: parseInt(amt)
+  });
+  e.preventDefault();
+});
+
+// Close Checkout on page navigation:
+window.addEventListener('popstate', function() {
+  handler.close();
+});
+</script>
