@@ -61,6 +61,12 @@ group :test do
   gem 'database_cleaner'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
+
+  gem 'rspec-rails'
+  gem 'guard-rspec'
+  gem 'simplecov', :require => false
+  gem 'metric_fu'        # collect code metrics
+  gem 'rails-controller-testing'
 end
 
 group :production do

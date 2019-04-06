@@ -4,10 +4,12 @@ Feature: make donation payments using Stripe
   I want to donate money to Bail Reform at Berkeley
   So that I can help people in need
 
+@javascript
 Scenario: choose a donation amount
 Given I am on the new donation page
 When I fill in "amount" with "500"
 And I press "Pay with Card"
+Then I should see the stripe form
 
 Scenario: get a valid token
 Given I create a donation with the token "tok_visa" and amount "500"
