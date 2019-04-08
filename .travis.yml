@@ -1,6 +1,8 @@
 language: ruby
 rvm:
         - 2.5.3
+cache:
+        bundler: true
 
 addons:
   apt:
@@ -9,3 +11,25 @@ addons:
     packages:
       - google-chrome-stable
 
+env:
+        global:
+                5384c291ae5ce890f2e486a4c919bdf36d0cc49feeb6e58c71203140b8ed80f4
+
+before_install:
+        - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+        - chmod +x ./cc-test-reporter
+
+install:
+        - bundle install --without production --path=${BUNDLE_PATH:-vendor/bundle}
+
+before_script: bundle exec rake db:create db:migrate
+
+script:
+        - bundle exec rspec
+        - bundle exec rake
+
+after_script:
+        - ./cc-test-reporter format-coverage -t simplecov -o coverage/codeclimate.backend.json coverage/backend/.resultset.json # Format backend coverage
+        - ./cc-test-reporter format-coverage -t lcov -o coverage/codeclimate.frontend.json coverage/frontend/lcov.info  # Format frontend coverage
+        - ./cc-test-reporter sum-coverage coverage/codeclimate.*.json -p 2                  # Sum both coverage parts into coverage/codeclimate.json
+        - if [[ "$TRAVIS_TEST_RESULT" == 0 ]]; then ./cc-test-reporter upload-coverage; fi  # Upload coverage/codeclimate.json
