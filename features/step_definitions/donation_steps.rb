@@ -9,3 +9,7 @@ When /^I should see the stripe form$/ do
     assert page.has_ccss?('iframe[name="stripe_checkout_app"]')
   end
 end
+
+Then /^the value of "([^"]*)" should be "([^"]*)"$/ do |field, amt|
+  expect(find_field(field).value).to eq amt
+end
