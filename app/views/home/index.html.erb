@@ -1,6 +1,13 @@
 <h1>Bail Reform at Berkeley</h1>
+<div class="navigationBar">
+  <%= link_to "About Us", about_path, method: :get %>
+  <%= link_to "Meet the Team", team_path, method: :get %>
+  <%= link_to "Get Involved", volunteer_path, method: :get %>
+  <%= link_to "FAQ", faq_path, method: :get %>
+  <%= link_to "Blog", blog_path, method: :get %>
+</div>
 <div class="DonateAndApplyContainer">
-  <button type="button">Apply for Bail</button>
+  <%= button_to "Apply for Bail", new_apply_path, method: :get %>
   <%= button_to "Donate", new_donation_path, method: :get %>
 </div>
 <%= image_tag("HomePageBailReformLogo.png",  :size => "300x200", :alt => "homepage logo") %>
