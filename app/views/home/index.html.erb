@@ -1,11 +1,9 @@
-<h1>Bail Reform at Berkeley</h1>
 <div class="navigationBar">
-  <%= link_to "About Us", about_path, method: :get %>
-  <%= link_to "Meet the Team", team_path, method: :get %>
-  <%= link_to "Get Involved", volunteer_path, method: :get %>
-  <%= link_to "FAQ", faq_path, method: :get %>
-  <%= link_to "Blog", blog_path, method: :get %>
+  <% @nav_links.each do |name, link| %>
+    <%= link_to name, link, method: :get %>
+  <% end %>
 </div>
+<h1>Bail Reform at Berkeley</h1>
 <div class="DonateAndApplyContainer">
   <%= button_to "Apply for Bail", new_apply_path, method: :get %>
   <%= button_to "Donate", new_donation_path, method: :get %>

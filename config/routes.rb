@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'home#index'
+  root 'home#index', :as => 'root'
 
   # routes for donating
   get 'donate/new' => 'donate#new', :as => 'new_donation'
@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get 'volunteer' => 'home#volunteer', :as => 'volunteer'
   get 'faq' => 'home#faq', :as => 'faq'
   get 'blog' => 'home#blog', :as => 'blog'
+  get 'contact' => 'home#contact', :as => 'contact'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

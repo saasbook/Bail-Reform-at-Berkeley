@@ -1,3 +1,9 @@
+<div class="navigationBar">
+  <% @nav_links.each do |name, link| %>
+    <%= link_to name, link, method: :get %>
+  <% end %>
+</div>
+
 <h1>Meet the team</h1>
 <div class="bio">
   <h2>Tad Tobar</h2>
@@ -42,3 +48,4 @@
 </div>
 
 <%= link_to "Back to Home", root_path, method: :get %>
+<%= link_to "Get in Touch", contact_path, method: :get %>
