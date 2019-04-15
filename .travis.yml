@@ -6,6 +6,13 @@ rvm:
 # make sure production-only gems are not installed
 bundler_args: --without production
 
+addons:
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable
+      
 env:
   global:
     # in TravisCI settings, set CCKEY to your CodeClimate Test Reporter ID:
