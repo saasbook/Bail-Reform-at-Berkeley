@@ -1,14 +1,14 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/autumn/repo/CS169/bail-reform-at-berkeley/config/environment.rb": [
+      "/mnt/d/UCB/06 Semester/CS 169/project/repo/bail-reform-at-berkeley/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/autumn/repo/CS169/bail-reform-at-berkeley/config/application.rb": [
+      "/mnt/d/UCB/06 Semester/CS 169/project/repo/bail-reform-at-berkeley/config/application.rb": [
         1,
         null,
         1,
@@ -29,13 +29,13 @@
         null,
         null
       ],
-      "/Users/autumn/repo/CS169/bail-reform-at-berkeley/config/boot.rb": [
+      "/mnt/d/UCB/06 Semester/CS 169/project/repo/bail-reform-at-berkeley/config/boot.rb": [
         1,
         null,
         1,
         1
       ],
-      "/Users/autumn/repo/CS169/bail-reform-at-berkeley/config/environments/test.rb": [
+      "/mnt/d/UCB/06 Semester/CS 169/project/repo/bail-reform-at-berkeley/config/environments/test.rb": [
         1,
         null,
         null,
@@ -83,7 +83,7 @@
         null,
         null
       ],
-      "/Users/autumn/repo/CS169/bail-reform-at-berkeley/config/initializers/application_controller_renderer.rb": [
+      "/mnt/d/UCB/06 Semester/CS 169/project/repo/bail-reform-at-berkeley/config/initializers/application_controller_renderer.rb": [
         null,
         null,
         null,
@@ -93,7 +93,7 @@
         null,
         null
       ],
-      "/Users/autumn/repo/CS169/bail-reform-at-berkeley/config/initializers/assets.rb": [
+      "/mnt/d/UCB/06 Semester/CS 169/project/repo/bail-reform-at-berkeley/config/initializers/assets.rb": [
         null,
         null,
         null,
@@ -109,7 +109,7 @@
         null,
         null
       ],
-      "/Users/autumn/repo/CS169/bail-reform-at-berkeley/config/initializers/backtrace_silencers.rb": [
+      "/mnt/d/UCB/06 Semester/CS 169/project/repo/bail-reform-at-berkeley/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -118,7 +118,7 @@
         null,
         null
       ],
-      "/Users/autumn/repo/CS169/bail-reform-at-berkeley/config/initializers/content_security_policy.rb": [
+      "/mnt/d/UCB/06 Semester/CS 169/project/repo/bail-reform-at-berkeley/config/initializers/content_security_policy.rb": [
         null,
         null,
         null,
@@ -145,20 +145,20 @@
         null,
         null
       ],
-      "/Users/autumn/repo/CS169/bail-reform-at-berkeley/config/initializers/cookies_serializer.rb": [
+      "/mnt/d/UCB/06 Semester/CS 169/project/repo/bail-reform-at-berkeley/config/initializers/cookies_serializer.rb": [
         null,
         null,
         null,
         null,
         1
       ],
-      "/Users/autumn/repo/CS169/bail-reform-at-berkeley/config/initializers/filter_parameter_logging.rb": [
+      "/mnt/d/UCB/06 Semester/CS 169/project/repo/bail-reform-at-berkeley/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/autumn/repo/CS169/bail-reform-at-berkeley/config/initializers/inflections.rb": [
+      "/mnt/d/UCB/06 Semester/CS 169/project/repo/bail-reform-at-berkeley/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -176,13 +176,13 @@
         null,
         null
       ],
-      "/Users/autumn/repo/CS169/bail-reform-at-berkeley/config/initializers/mime_types.rb": [
+      "/mnt/d/UCB/06 Semester/CS 169/project/repo/bail-reform-at-berkeley/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null
       ],
-      "/Users/autumn/repo/CS169/bail-reform-at-berkeley/config/initializers/wrap_parameters.rb": [
+      "/mnt/d/UCB/06 Semester/CS 169/project/repo/bail-reform-at-berkeley/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -198,7 +198,22 @@
         null,
         null
       ],
-      "/Users/autumn/repo/CS169/bail-reform-at-berkeley/config/routes.rb": [
+      "/mnt/d/UCB/06 Semester/CS 169/project/repo/bail-reform-at-berkeley/config/routes.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
         1,
         1,
         1,
@@ -207,21 +222,26 @@
         1,
         1,
         null,
+        null,
         null
       ],
-      "/Users/autumn/repo/CS169/bail-reform-at-berkeley/app/helpers/application_helper.rb": [
+      "/mnt/d/UCB/06 Semester/CS 169/project/repo/bail-reform-at-berkeley/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/autumn/repo/CS169/bail-reform-at-berkeley/app/helpers/donate_helper.rb": [
+      "/mnt/d/UCB/06 Semester/CS 169/project/repo/bail-reform-at-berkeley/app/helpers/apply_helper.rb": [
         1,
         null
       ],
-      "/Users/autumn/repo/CS169/bail-reform-at-berkeley/app/helpers/home_helper.rb": [
+      "/mnt/d/UCB/06 Semester/CS 169/project/repo/bail-reform-at-berkeley/app/helpers/donate_helper.rb": [
         1,
         null
       ],
-      "/Users/autumn/repo/CS169/bail-reform-at-berkeley/app/controllers/donate_controller.rb": [
+      "/mnt/d/UCB/06 Semester/CS 169/project/repo/bail-reform-at-berkeley/app/helpers/home_helper.rb": [
+        1,
+        null
+      ],
+      "/mnt/d/UCB/06 Semester/CS 169/project/repo/bail-reform-at-berkeley/app/controllers/donate_controller.rb": [
         1,
         1,
         null,
@@ -251,11 +271,28 @@
         null,
         null
       ],
-      "/Users/autumn/repo/CS169/bail-reform-at-berkeley/app/controllers/application_controller.rb": [
+      "/mnt/d/UCB/06 Semester/CS 169/project/repo/bail-reform-at-berkeley/app/controllers/application_controller.rb": [
         1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        5,
+        null,
         null
       ],
-      "/Users/autumn/repo/CS169/bail-reform-at-berkeley/spec/controllers/home_controller_spec.rb": [
+      "/mnt/d/UCB/06 Semester/CS 169/project/repo/bail-reform-at-berkeley/spec/controllers/home_controller_spec.rb": [
         1,
         null,
         1,
@@ -265,13 +302,28 @@
         null,
         null
       ],
-      "/Users/autumn/repo/CS169/bail-reform-at-berkeley/app/controllers/home_controller.rb": [
+      "/mnt/d/UCB/06 Semester/CS 169/project/repo/bail-reform-at-berkeley/app/controllers/home_controller.rb": [
         1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
         1,
         null,
         null
       ]
     },
-    "timestamp": 1554522946
+    "timestamp": 1555300599
   }
 }

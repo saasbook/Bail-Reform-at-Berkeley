@@ -1,6 +1,11 @@
 require 'test_helper'
 
 class DonateControllerTest < ActionDispatch::IntegrationTest
+  test "should get info page" do
+    get donation_path
+    assert_response :success
+  end
+
   test "should get new" do
     get new_donation_path
     assert_response :success

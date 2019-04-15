@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BailReformAtBerkeley</title>
+    <title>Bail Reform At Berkeley</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,11 @@
   </head>
 
   <body>
+    <div class="navigation-bar">
+      <% @nav_links.each do |name, link| %>
+        <%= link_to name, link, method: :get %>
+      <% end %>
+    </div>
     <%= yield %>
   </body>
 </html>
