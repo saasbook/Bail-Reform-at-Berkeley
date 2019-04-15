@@ -13,3 +13,11 @@ end
 Then /^the value of "([^"]*)" should be "([^"]*)"$/ do |field, amt|
   expect(find_field(field).value).to eq amt
 end
+
+Then /^"([^"]*)" should be enabled$/ do |button|
+  expect(page).to have_button(button, disabled: false)
+end
+
+Then /^"([^"]*)" should be disabled$/ do |button|
+  expect(page).to have_button(button, disabled: true)
+end
