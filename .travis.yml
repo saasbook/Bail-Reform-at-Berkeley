@@ -2,17 +2,17 @@
 language: ruby
 rvm:
   - 2.5.3
-
-# make sure production-only gems are not installed
-bundler_args: --without production
-
+  
 addons:
   apt:
     sources:
       - google-chrome
     packages:
       - google-chrome-stable
-      
+
+# make sure production-only gems are not installed
+bundler_args: --without production
+
 env:
   global:
     # in TravisCI settings, set CCKEY to your CodeClimate Test Reporter ID:
