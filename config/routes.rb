@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'info#index', :as => 'root'
+  root 'info#index'
 
   # routes for donating
   get 'donate' => 'donate#index', :as => 'donation'

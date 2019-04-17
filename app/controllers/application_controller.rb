@@ -2,7 +2,7 @@ include Rails.application.routes.url_helpers
 
 class ApplicationController < ActionController::Base
   @@nav_links = {
-    "Home" => home_path,
+    "Home" => root_path,
     "About Us" => about_path,
     "Meet the Team" => team_path,
     "Get Involved" => participate_path,
