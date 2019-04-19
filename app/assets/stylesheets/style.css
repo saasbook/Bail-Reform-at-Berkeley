@@ -21,3 +21,7 @@ p {
 	font-weight: normal;
 	color: #000000;
 }
+
+.bg-yellow {
+	background-color: #ffcc00!important;
+}
