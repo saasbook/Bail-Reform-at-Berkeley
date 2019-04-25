@@ -33,3 +33,8 @@
    border-color: rgba(0,0,0,0)!important;
    pointer-events:none;
   }
+  #notice #warning {
+	background: rosybrown;
+	margin: 1em 0;
+	padding: 4px;
+  }
