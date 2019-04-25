@@ -15,7 +15,11 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
+  <% if flash[:notice] %>
+    <h4 #notice.message>
+      <%= flash[:notice] %>
+    </h4>
+  <% end %>
   <body>
     <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-yellow">
       <a class="navbar-brand collapse navbar-collapse" href="/" id="navbarBrand">
@@ -25,6 +29,15 @@
       <a id="logoCollapse" class="navbar-toggler no-border" data-toggle="collapse" data-target="#navbarBrand" aria-expanded="false" aria-label="Logo">
         <%= image_tag "HomePageBailReformLogo.png", :class => "logo" %>
       </a>
+      <% if !@mid_log_in %>
+        <% if @logged_in %>
+          <%= link_to "Sign Out", sign_out_path, method: :get, :class => "btn btn-primary"%>
+          <!--<button class="btn btn-primary active" aria-label="Sign Out"> Sign Out </button>-->
+        <% else %>
+          <%= link_to "Sign In", sign_in_path, method: :get, :class => "btn btn-primary active"%>
+          <!--<button class="btn btn-primary active" aria-label="Sign In"> Sign In </button>-->
+        <% end %>
+      <% end %>
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>

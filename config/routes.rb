@@ -21,5 +21,11 @@ Rails.application.routes.draw do
   get 'blog' => 'info#blog', :as => 'blog'
   get 'contact' => 'info#contact', :as => 'contact'
 
+  # routes for login
+  # post 'sign_in' => 'login#sign_in', :as => 'sign_in_submit'
+  get 'sign_in' => 'login#sign_in', :as => 'sign_in_submit' #delete this when we have a form
+  get 'sign_in_form' => 'login#sign_in_form', :as => 'sign_in'
+  get 'sign_out' => 'login#sign_out', :as => 'sign_out'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
