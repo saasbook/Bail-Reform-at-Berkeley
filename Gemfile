@@ -37,6 +37,9 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # Use stripe for payments
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
+# Use devise for login
+gem 'devise'
+
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3', '~> 1.3', '< 1.4'
@@ -52,6 +55,8 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'figaro'
+  gem 'factory_bot_rails'
+  gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 end
 
 group :test do
@@ -68,6 +73,8 @@ group :test do
   gem 'simplecov', :require => false
   gem 'metric_fu'        # collect code metrics
   gem 'rails-controller-testing'
+  gem 'factory_bot_rails'
+  gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 end
 
 group :production do

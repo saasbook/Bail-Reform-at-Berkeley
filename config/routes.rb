@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
-  root 'info#index'
+  root to: 'info#index'
+
+  # routes for signing in, using 'devise'
+  devise_for :users, path: '',
+    path_names: {
+      sign_in: 'login',
+      sign_out: 'logout',
+      sign_up: 'register'
+    }
 
   # routes for donating
   get 'donate' => 'donate#index', :as => 'donation'
@@ -8,7 +16,8 @@ Rails.application.routes.draw do
   get 'donate/error' => 'donate#fail', :as => 'failed_donation'
   get 'donate/:stripeToken/:amount' => 'donate#create', :as => 'create_donation'
 
-  # routes for applicants
+  # routes for filling out an application form
+  ## suggestion: new model "forms", and user has_many forms
   get 'apply' => 'apply#index', :as => 'application'
   get 'apply/new' => 'apply#new', :as => 'new_application'
 
