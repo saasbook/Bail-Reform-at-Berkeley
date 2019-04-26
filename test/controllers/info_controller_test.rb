@@ -35,8 +35,4 @@ class HomeControllerTest < ActionDispatch::IntegrationTest
     get contact_path
     assert_response :success
   end
-
-  test "should have sign in page" do
-    get sign_in_path
-    assert_response :success
 end

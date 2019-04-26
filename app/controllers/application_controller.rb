@@ -11,6 +11,5 @@ class ApplicationController < ActionController::Base
       "Donate" => donation_path,
       "Apply for Bail" => application_path
     }
-    @logged_in = session[:logged_in].nil? ? false : session[:logged_in]
   end
 end
