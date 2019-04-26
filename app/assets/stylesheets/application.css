@@ -14,22 +14,28 @@
  *= require_self
  */
 
- .logo {
- 	max-height: 60px;
- }
+.logo {
+	max-height: 60px;
+}
 
- .navbar-brand {
- 	font-weight: bold;
- 	font-family: "Harriet";
- 	font-style: italic;
- 	color: #000000;
- }
+.navbar-brand {
+	font-weight: bold;
+	font-family: "Harriet";
+	font-style: italic;
+	color: #000000;
+}
 
- .navbar {
- 	box-shadow: 0px 1px 18px #00000075;
- }
+.navbar {
+	box-shadow: 0px 1px 18px #00000075;
+}
 
- #logoCollapse {
-   border-color: rgba(0,0,0,0)!important;
-   pointer-events:none;
-  }
+#logoCollapse {
+  border-color: rgba(0,0,0,0)!important;
+  pointer-events:none;
+}
+
+.login-notice, .login-alert {
+  background: rosybrown;
+  margin: 1em 0;
+  padding: 4px;
+}
