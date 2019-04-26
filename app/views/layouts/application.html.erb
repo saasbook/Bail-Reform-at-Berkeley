@@ -34,14 +34,18 @@
         <ul class="navbar-nav ml-auto">
           <% @nav_links.each do |name, link| %>
             <li class="nav-item">
-              <%= link_to name, link, method: :get, :class => "nav-link" %>
+              <%= link_to name, link, :class => "nav-link" %>
             </li>
           <% end %>
         </ul>
       </div>
     </nav>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <% if notice %>
+      <p class="login-notice"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="login-alert"><%= alert %></p>
+    <% end %>
     <%= yield %>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
