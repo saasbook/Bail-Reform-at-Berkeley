@@ -2,12 +2,9 @@ Have info about applying for bail.
 
 <%= button_to "Apply for Bail", apply_form_submit_path, method: :get %>
 <%= form_tag(apply_form_submit_path) do %>
+  <%= text_field "person", "name", "size" => 20 %>
   <label>age</label>
   <label>gender</label>
   <label>ethnicity</label>
 <% end %>
 
-<%= form_for(@user) do |f| %>
-  <%= f.label :name %>
-<%= f.text_field :name %>
-<% end %>
