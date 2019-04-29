@@ -1,6 +1,6 @@
 Have info about applying for bail.
 
-<%= form_tag(apply_form_submit_path, :id => 'apply_form', :class => 'form-style-3') do -%>
+<%= form_tag(apply_form_submit_path, :id => 'apply_form', :class => 'BailApplicationForm') do -%>
   <fieldset><legend>Bail Application</legend>
     <label for="first_name">
       <span>First Name<span class="required">*</span></span><input type="text" class="input-field" name="first_name" value="" /></label>
@@ -8,8 +8,5 @@ Have info about applying for bail.
     <label for="email"><span>Email <span class="required">*</span></span><input type="email" class="input-field" name="email" value="" /></label>
     <label><span> </span><input type="submit" value="Apply for Bail" /></label>
   </fieldset>
-<!--  First Name: <%#= text_field_tag(:first_name) %>-->
-<!--  Last Name: <%#= text_field_tag(:last_name) %>-->
 <% end -%>
 
-<%= button_to "Apply for Bail", apply_form_submit_path, :id => 'apply_form', method: :get -%>

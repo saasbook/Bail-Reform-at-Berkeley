@@ -2,15 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.form-style-3{
+.BailApplicationForm{
   max-width: 450px;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
-.form-style-3 label{
+.BailApplicationForm label{
   display:block;
   margin-bottom: 10px;
 }
-.form-style-3 label > span{
+.BailApplicationForm label > span{
   float: left;
   width: 100px;
   color: #F072A9;
@@ -18,7 +18,7 @@
   font-size: 13px;
   text-shadow: 1px 1px 1px #fff;
 }
-.form-style-3 fieldset{
+.BailApplicationForm fieldset{
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -30,11 +30,10 @@
   -moz-box-shadow: inset 0px 0px 15px #FFE5E5;
   -webkit-box-shadow: inset 0px 0px 15px #FFE5E5;
 }
-.form-style-3 fieldset legend{
+.BailApplicationForm fieldset legend{
   color: #FFA0C9;
   border-top: 1px solid #FFD2D2;
   border-left: 1px solid #FFD2D2;
-  border-right: 1px solid #FFD2D2;
   border-radius: 5px 5px 0px 0px;
   -webkit-border-radius: 5px 5px 0px 0px;
   -moz-border-radius: 5px 5px 0px 0px;
@@ -46,13 +45,13 @@
   font-weight: normal;
   font-size: 12px;
 }
-.form-style-3 textarea{
+.BailApplicationForm textarea{
   width:250px;
   height:100px;
 }
-.form-style-3 input[type=text],
-.form-style-3 input[type=email],
-.form-style-3 textarea{
+.BailApplicationForm input[type=text],
+.BailApplicationForm input[type=email],
+.BailApplicationForm textarea{
   border-radius: 3px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -66,8 +65,8 @@
   background: #FFEFF6;
   width:50%;
 }
-.form-style-3  input[type=submit],
-.form-style-3  input[type=button]{
+.BailApplicationForm  input[type=submit],
+.BailApplicationForm  input[type=button]{
   background: #EB3B88;
   border: 1px solid #C94A81;
   padding: 5px 15px 5px 15px;
