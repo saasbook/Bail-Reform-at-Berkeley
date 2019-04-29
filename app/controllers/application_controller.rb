@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
       "Meet the Team" => team_path,
       "Get Involved" => participate_path,
       "FAQ" => faq_path,
-      "Blog" => blog_path,
+      "Op Ed" => blog_path,
       "Contact Us" => contact_path,
       "Donate" => donation_path,
       "Apply for Bail" => application_path
