@@ -2,11 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-<style type="text/css">
-                      .form-style-3{
-                        max-width: 450px;
-                        font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-                      }
+.form-style-3{
+  max-width: 450px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
 .form-style-3 label{
   display:block;
   margin-bottom: 10px;
@@ -93,4 +92,3 @@
   color:red;
   font-weight:normal;
 }
-</style>
