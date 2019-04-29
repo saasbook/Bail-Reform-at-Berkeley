@@ -3,10 +3,6 @@ Have info about applying for bail.
 <%= button_to "Apply for Bail", apply_form_submit_path, method: :get %>
 <%= form_tag(apply_form_submit_path) do %>
   <label>age</label>
-  <%= f.text_field :age %>
   <label>gender</label>
-  <%= f.select :gender, options_for_select(gender_options), { prompt: 'Select gender' } %>
   <label>ethnicity</label>
-  <%= f.select :ethnicity, options_for_select(ethnicity_options), { prompt: 'Select ethnicity' } %>
-  <%= f.submit "Submit" %>
 <% end %>
