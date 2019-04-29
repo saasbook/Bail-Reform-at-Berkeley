@@ -9,8 +9,8 @@ Rails.application.routes.draw do
   get 'donate/:stripeToken/:amount' => 'donate#create', :as => 'create_donation'
 
   # routes for applicants
-  #get 'apply' => 'apply#index', :as => 'application'
-  get 'apply' => 'apply#apply_bail', :as => 'bail_apply_submit'
+  get 'apply' => 'apply#index', :as => 'application'
+  get 'apply_form_submit' => 'apply#apply_bail', :as => 'apply_form_submit'
   get 'apply/new' => 'apply#new', :as => 'new_application'
 
   # routes for logistics
