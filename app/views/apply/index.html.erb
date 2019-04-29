@@ -6,3 +6,8 @@ Have info about applying for bail.
   <label>gender</label>
   <label>ethnicity</label>
 <% end %>
+
+<%= form_for(@user) do |f| %>
+  <%= f.label :name %>
+<%= f.text_field :name %>
+<% end %>
