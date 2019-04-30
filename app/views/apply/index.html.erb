@@ -1,6 +1,6 @@
 Have info about applying for bail.
 
-<%= form_tag(apply_form_submit_path, :id => 'apply_form', :class => 'BailApplicationForm') do -%>
+<%= form_tag({controller: 'apply', action: 'apply_bail'}, :id => 'apply_form', :class => 'BailApplicationForm') do -%>
   <fieldset><legend>Bail Application</legend>
     <label for="first_name">
       <span>First Name
