@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   # routes for filling out an application form
   ## suggestion: new model "forms", and user has_many forms
   get 'apply' => 'apply#index', :as => 'application'
+  post 'apply_form_submit' => 'apply#apply_bail', :as => 'apply_form_submit'
   get 'apply/new' => 'apply#new', :as => 'new_application'
 
   # routes for logistics
