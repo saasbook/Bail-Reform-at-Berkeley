@@ -10,8 +10,9 @@ Rails.application.routes.draw do
 
   # routes for applicants
   get 'apply' => 'apply#index', :as => 'application'
-  get 'apply_form_submit' => 'apply#apply_bail', :as => 'apply_form_submit'
+  #get 'apply_form_submit' => 'apply#apply_bail', :as => 'apply_form_submit'
   get 'apply/new' => 'apply#new', :as => 'new_application'
+  match 'apply_form_submit' => 'apply#apply_bail'
 
   # routes for logistics
   get 'home' => 'info#index',   :as => 'home'
