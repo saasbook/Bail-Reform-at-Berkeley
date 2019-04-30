@@ -6,5 +6,6 @@ Feature: linkedin links avalaible on team page
 Scenario: Linkedin Links
  Given I am on the team page
  Then show me the page
- Then I should see clickable text "Tad Tobar"
+ Then I should see "Tad Tobar"
+ Then I should see clickable text "Tad Tobar" containing linkedin link
  # Then I should be on "http://www.linkedin.com"
