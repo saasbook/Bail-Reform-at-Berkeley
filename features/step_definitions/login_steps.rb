@@ -10,6 +10,8 @@ And /^I press the \"Sign Up\" button$/ do
   click_button("register-button")
 end
 
+# And /^I fill \"Password confirmation\" with \"(.+)\"$/
+
 Given /^user \"(.+@.+)\" with password \"(.+)\" is logged in$/ do |email, password|
   steps %Q{
     Given user "#{email}" with password "#{password}" exists
