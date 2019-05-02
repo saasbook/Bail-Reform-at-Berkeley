@@ -6,14 +6,14 @@ Feature: make donation payments using Stripe
 
 @javascript
 Scenario: choose a donation amount
-Given I am on the new donation page
+Given I am on the donation page
 When I fill in "amount" with "500"
-And I press "Pay with Card"
+And I press "Next"
 Then I should see the stripe form
 
 @javascript
 Scenario: choose a donation amount
-Given I am on the new donation page
+Given I am on the donation page
 When I fill in "amount" with "50a!0"
 Then the value of "amount" should be "500"
 

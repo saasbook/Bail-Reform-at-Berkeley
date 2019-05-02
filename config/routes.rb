@@ -10,7 +10,6 @@ Rails.application.routes.draw do
     }
 
   # routes for donating
-  get 'donate' => 'donate#index', :as => 'donation'
   get 'donate/new' => 'donate#new', :as => 'new_donation'
   get 'donate/success' => 'donate#success', :as => 'successful_donation'
   get 'donate/error' => 'donate#fail', :as => 'failed_donation'

@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
       "FAQ" => faq_path,
       "Op Ed" => blog_path,
       "Contact Us" => contact_path,
-      "Donate" => donation_path,
+      "Donate" => new_donation_path,
       "Apply for Bail" => application_path,
       session_name => session_link
     }
