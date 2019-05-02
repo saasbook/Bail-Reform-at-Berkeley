@@ -53,6 +53,10 @@ p {
   color: #003161;
 }
 
+.whiteFont {
+  color: #ffffff;
+}
+
 mark {
   background-color: #ffcc00;
 }
