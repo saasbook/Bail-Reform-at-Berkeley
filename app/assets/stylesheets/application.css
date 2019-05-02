@@ -34,8 +34,7 @@
   pointer-events:none;
 }
 
-.login-notice, .login-alert {
-  background: rosybrown;
+.notice, .login-alert {
   margin: 1em 0;
-  padding: 4px;
+  padding-left: 5%;
 }

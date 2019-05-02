@@ -19,10 +19,10 @@ Then the value of "amount" should be "500"
 
 Scenario: get a valid token
 Given I create a donation with the token "tok_visa" and amount "500"
-Then I should be on the successful donation page
-And I should see "Success"
+Then I should be on the home page
+And I should see "Thank you for your donation."
 
 Scenario: get an invalid token
 Given I create a donation with the token "tok_chargeDeclined" and amount "500"
-Then I should be on the failed donation page
-And I should see "Error"
+Then I should be on the new donation page
+And I should see "Something went wrong."
