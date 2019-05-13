@@ -8,7 +8,26 @@ http://bail-reform-at-berkeley.herokuapp.com/
  [![Build Status](https://travis-ci.com/ariknny/bail-reform-at-berkeley.svg?branch=master)](https://travis-ci.com/ariknny/bail-reform-at-berkeley.svg?branch=master)
 
 ## Setup
+In order to get the app running locally, you need to have Ruby version `2.5.3` installed. Run `bundle install -- without production` to install all the required gems. Follow this with `rake db:setup` to initialize the database. `rails server` (or `bundle exec rails server`) starts the application locally and should be enough to run the app.
 
+Currently we don't have any keys or secrets stored in the repo, but we setup the infrastructure to house the secrets for when they are needed in the future. In order to decrypt `config/application.yml.asc` the following command must be run.
+```
+export KEY=your-secret-key-value 
+gpg --passphrase "$KEY" --decrypt \
+--output config/application.yml config/application.yml.asc
+```
+`your-secret-key-value` should be filled in with the value of the KEY environment variable in Travis CI. 
+Whenever a variable must be added to `config/application.yml`, then run this command and commit the changes to `config/application.yml.asc` into version control.
+```
+export KEY=your-secret-key-value gpg --passphrase "$KEY" \
+--encrypt --symmetric --armor \
+--output config/application.yml.asc config/application.yml
+```
+
+If developing on Heroku, whenever a change is made to `config/application.yml` run this command to keep Heroku updated and in the know.
+```
+figaro heroku:set -e production -a name-of-heroku-app
+```
 ## Deployment
 
 ## Login
