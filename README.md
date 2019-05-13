@@ -12,6 +12,8 @@ http://bail-reform-at-berkeley.herokuapp.com/
 ## Deployment
 After initializing a local Git repository and committing the application code, you can now push the code for your app to deploy on Heroku. Make sure you are in the app's root directory and run ```heroku create```. Your Heroku Git repository should now be set as a remote for your local repository. Use ```git remote -v``` to ensure that the heroku remote is set for the app. 
 You can now use ```git push heroku master``` to push the code from your local repository's ```master``` branch to the heroku remote. Running this command will deploy the latest committed version of your code to Heroku. Please visit Heroku's [Deploying with Git](https://devcenter.heroku.com/articles/git) for more information. 
+
+Due to the fact that our client wants the app to be hosted on Berkeley's Open Computing Facility (OCF) domain, the client will first need to create an OCF account. After obtaining the account information, follow the instructions on OCF's [Web Hosting](https://www.ocf.berkeley.edu/docs/services/web/) and [Ruby on Rails](https://www.ocf.berkeley.edu/docs/services/webapps/rails/) pages. 
 ## Login
 
 ## Stripe
