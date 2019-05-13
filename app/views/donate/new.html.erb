@@ -1,17 +1,38 @@
 <script src="https://checkout.stripe.com/checkout.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<h1>Donate</h1>
 
-<form id="form">
-    <p>
-        <label for="amount">Enter amount</label>
-        <div class="flex">
-            <span class="currency">$</span>
-            <input id="amount" name="amount" type="text" maxlength="15" />
-        </div>
-    </p>
-    <button id="customButton" disabled>Pay with Card</button>
-</form>
+<div class="donateAbout" style="float: left;">
+  <h1 class="font-weight-bold text-center">Donate to Bail Reform</h1>
+  <p>
+    Bail Reform at Berkeley is a student run bail fund and advocacy group at UC Berkeley working to reform the bail system in the United States and is working towards their first bail out. Out of the 800,000 people in jails today half a million of them have not been convicted of a crime.  This system punishes the poor, puts them at risk of losing their job, home and even custody of their child and makes it really hard to integrate back into society creating an endless cycle of racial and income inequality. To learn more about the cash bail system, read our op-ed by team member Thomas Brown.
+  </p>
+  <p>
+    With your generous support we are able to work towards our goal of bailing out community members, and eventually work towards changing the criminal justice system.
+  </p>
+
+  <div class="headerTop" style="text-align: center;">
+    <div style="display: inline-block;">
+      <strong style="float: left;"></strong>
+      <span style="float: left;">TAKE ACTION</span>
+      <strong style="float: left;"></strong>
+    </div>
+  </div>
+  <div class="card bg-secondary">
+    <div class="card-body">
+      <form id="form">
+        <p style="font-size: 1.5rem;">
+          <label class="whiteFont" for="amount">Yes, I will contribute </label>
+          <span class="whiteFont currency">$</span>
+          <input id="amount" name="amount" type="text" maxlength="15" style="max-width: 200px;" />
+        </p>
+        <button id="customButton" disabled>Next</button>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="donateAbout" style="float: left;">
+  <%= image_tag "donate.jpg", :style => 'width: 100%; margin-top: 10%;'%>
+</div>
 
 <script>
 (function($, undefined) {

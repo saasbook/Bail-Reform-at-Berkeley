@@ -1,15 +1,24 @@
 Rails.application.routes.draw do
-  root 'info#index'
+  root to: 'info#index'
+
+  # routes for signing in, using 'devise'
+  devise_for :users, path: '',
+    path_names: {
+      sign_in: 'login',
+      sign_out: 'logout',
+      sign_up: 'register'
+    }
 
   # routes for donating
-  get 'donate' => 'donate#index', :as => 'donation'
   get 'donate/new' => 'donate#new', :as => 'new_donation'
   get 'donate/success' => 'donate#success', :as => 'successful_donation'
   get 'donate/error' => 'donate#fail', :as => 'failed_donation'
   get 'donate/:stripeToken/:amount' => 'donate#create', :as => 'create_donation'
 
-  # routes for applicants
+  # routes for filling out an application form
+  ## suggestion: new model "forms", and user has_many forms
   get 'apply' => 'apply#index', :as => 'application'
+  post 'apply_form_submit' => 'apply#apply_bail', :as => 'apply_form_submit'
   get 'apply/new' => 'apply#new', :as => 'new_application'
 
   # routes for logistics
@@ -20,12 +29,6 @@ Rails.application.routes.draw do
   get 'faq' => 'info#faq', :as => 'faq'
   get 'blog' => 'info#blog', :as => 'blog'
   get 'contact' => 'info#contact', :as => 'contact'
-
-  # routes for login
-  # post 'sign_in' => 'login#sign_in', :as => 'sign_in_submit'
-  get 'sign_in' => 'login#sign_in', :as => 'sign_in_submit' #delete this when we have a form
-  get 'sign_in_form' => 'login#sign_in_form', :as => 'sign_in'
-  get 'sign_out' => 'login#sign_out', :as => 'sign_out'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

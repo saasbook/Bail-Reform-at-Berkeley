@@ -14,15 +14,11 @@ class DonateController < ApplicationController
           description: 'Bail Reform at Berkely Donation',
           source: token,
       })
-      redirect_to successful_donation_path
+      flash[:notice] = "Thank you for your donation."
+      redirect_to '/'
     rescue
-      redirect_to failed_donation_path
+      flash[:notice] = "Something went wrong."
+      redirect_to new_donation_path
     end
-  end
-
-  def success
-  end
-
-  def fail
   end
 end

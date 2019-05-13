@@ -49,6 +49,14 @@ p {
   color: #ffcc00;
 }
 
+.blueFont {
+  color: #003161;
+}
+
+.whiteFont {
+  color: #ffffff;
+}
+
 mark {
   background-color: #ffcc00;
 }

@@ -8,16 +8,6 @@ describe DonateController do
 
   it "should redirect on create" do
     get :create, :params => {:stripeToken => "123", :amount => "500"}
-    response.should redirect_to(failed_donation_path)
-  end
-
-  it "should get success" do
-    get :success
-    response.should render_template(:success)
-  end
-
-  it "should get failure" do
-    get :fail
-    response.should render_template(:fail)
+    response.should redirect_to(new_donation_path)
   end
 end
