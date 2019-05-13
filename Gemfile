@@ -40,10 +40,6 @@ gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 # Use devise for login
 gem 'devise'
 
-# error logging and serving static assets
-# observationally, it produces more output about what the server is actually doing
-# gem 'rails_12factor'
-
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3', '~> 1.3', '< 1.4'

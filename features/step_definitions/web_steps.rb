@@ -102,6 +102,10 @@ When /^(?:|I )attach the file "([^"]*)" to "([^"]*)"$/ do |path, field|
   attach_file(field, File.expand_path(path))
 end
 
+Then("I should see clickable text {string} containing linkedin link") do |string|
+  page.has_link?(string, :href => "https://linkedin.com/in/")
+end
+
 Then /^(?:|I )should see "([^"]*)"$/ do |text|
   if page.respond_to? :should
     page.should have_content(text)
