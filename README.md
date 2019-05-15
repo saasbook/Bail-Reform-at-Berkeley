@@ -7,6 +7,13 @@ http://bail-reform-at-berkeley.herokuapp.com/
 
  [![Build Status](https://travis-ci.com/ariknny/bail-reform-at-berkeley.svg?branch=master)](https://travis-ci.com/ariknny/bail-reform-at-berkeley.svg?branch=master)
 
+##New Features Implemented
+-Homepage containing statistics on bail and mission statement of Bail Reform at Berkeley
+-Users can create an account, log in or log out of site by using "Login"
+-Users can donate to the BR@B bail fund, powered by the Stripe API by using "Donate"
+-Users can apply for aid from the BR@B bail fund using "Apply for Bail"
+-Users can learn about the leadership team of BR@B by using "Meet the Team," users can also learn more about each member by clicking their name which will redirect to their linkedin page
+
 ## Setup
 In order to get the app running locally, you need to have Ruby version `2.5.3` installed. Run `bundle install -- without production` to install all the required gems. Follow this with `rake db:setup` to initialize the database. `rails server` (or `bundle exec rails server`) starts the application locally and should be enough to run the app.
 
