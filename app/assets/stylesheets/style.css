@@ -1,0 +1,62 @@
+body {
+	font-family: "Helvetica";
+	font-weight: normal;
+	color: #000000;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: medium;
+	font-family: "Harriet";
+	font-style: italic;
+	color: #000000;
+}
+
+p {
+	font-family: 'Helvetica';
+	font-weight: normal;
+	color: #000000;
+}
+
+.bg-yellow {
+	background-color: #ffcc00!important;
+}
+
+.logo {
+	max-height: 60px;
+}
+
+.navbar-brand {
+	font-weight: bold;
+	font-family: "Harriet";
+	font-style: italic;
+	color: #000000;
+}
+
+.navbar {
+	box-shadow: 0px 1px 18px #00000075;
+}
+
+.bg-yellow {
+	background-color: #ffcc00!important;
+}
+
+.yellowFont {
+  color: #ffcc00;
+}
+
+.blueFont {
+  color: #003161;
+}
+
+.whiteFont {
+  color: #ffffff;
+}
+
+mark {
+  background-color: #ffcc00;
+}

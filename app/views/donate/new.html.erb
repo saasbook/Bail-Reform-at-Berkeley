@@ -1,0 +1,102 @@
+<script src="https://checkout.stripe.com/checkout.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+<div class="donateAbout" style="float: left;">
+  <h1 class="font-weight-bold text-center">Donate to Bail Reform</h1>
+  <p>
+    Bail Reform at Berkeley is a student run bail fund and advocacy group at UC Berkeley working to reform the bail system in the United States and is working towards their first bail out. Out of the 800,000 people in jails today half a million of them have not been convicted of a crime.  This system punishes the poor, puts them at risk of losing their job, home and even custody of their child and makes it really hard to integrate back into society creating an endless cycle of racial and income inequality. To learn more about the cash bail system, read our op-ed by team member Thomas Brown.
+  </p>
+  <p>
+    With your generous support we are able to work towards our goal of bailing out community members, and eventually work towards changing the criminal justice system.
+  </p>
+
+  <div class="headerTop" style="text-align: center;">
+    <div style="display: inline-block;">
+      <strong style="float: left;"></strong>
+      <span style="float: left;">TAKE ACTION</span>
+      <strong style="float: left;"></strong>
+    </div>
+  </div>
+  <div class="card bg-secondary">
+    <div class="card-body">
+      <form id="form">
+        <p style="font-size: 1.5rem;">
+          <label class="whiteFont" for="amount">Yes, I will contribute </label>
+          <span class="whiteFont currency">$</span>
+          <input id="amount" name="amount" type="text" maxlength="15" style="max-width: 200px;" />
+        </p>
+        <button id="customButton" disabled>Next</button>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="donateAbout" style="float: left;">
+  <%= image_tag "donate.jpg", :style => 'width: 100%; margin-top: 10%;'%>
+</div>
+
+<script>
+(function($, undefined) {
+    "use strict";
+    $(function() {
+        var $form = $( "#form" );
+        var $input = $form.find( "input" );
+        $input.on( "keyup", function( event ) {
+
+            var selection = window.getSelection().toString();
+            if ( selection !== '' ) {
+                $('#customButton').prop('disabled', true);
+                return;
+            }
+            //up, down, left, right
+            if ( $.inArray( event.keyCode, [38,40,37,39] ) !== -1 ) {
+                return;
+            }
+
+            var $this = $( this );
+            var input = $this.val();
+            var input = input.replace(/[\D\s\._\-]+/g, "");
+            input = input ? parseInt( input, 10 ) : 0;
+            if ( input === 0 ) {
+              $('#customButton').prop('disabled', true);
+            } else {
+              $('#customButton').prop('disabled', false);
+            }
+            $this.val( function() {
+                return ( input === 0 ) ? "" : input.toLocaleString( "en-US" );
+            } );
+        } );
+    });
+})(jQuery);
+</script>
+<script>
+var amt;
+
+var handler = StripeCheckout.configure({
+  key: 'pk_test_TYooMQauvdEDq54NiTphI7jx',
+  image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
+  locale: 'auto',
+  token: function(token) {
+    location.replace("/donate/" + token.id + "/" + amt);
+    // You can access the token ID with `token.id`.
+    // Get the token ID to your server-side code for use.
+  }
+});
+
+document.getElementById('customButton').addEventListener('click', function(e) {
+  // Open Checkout with further options:
+  amt = document.getElementById('amount').value;
+  amt = amt.replace(/[^0-9]/g, '') + "00";
+  handler.open({
+    name: 'Stripe.com',
+    description: '',
+    zipCode: true,
+    amount: parseInt(amt)
+  });
+  e.preventDefault();
+});
+
+// Close Checkout on page navigation:
+window.addEventListener('popstate', function() {
+  handler.close();
+});
+</script>

@@ -1,0 +1,35 @@
+Have info about applying for bail.
+
+<%= form_tag({controller: 'apply', action: 'apply_bail'}, :id => 'apply_form', :class => 'BailApplicationForm') do -%>
+  <fieldset><legend>Bail Application</legend>
+    <label for="first_name">
+      <span>First Name
+        <span class="required">*</span>
+      </span>
+      <input type="text" class="input-field" name="first_name" value="" />
+    </label>
+    <label for="last_name"><span>Last Name
+      <span class="required">*</span></span>
+      <input type="text" class="input-field" name="last_name" value="" />
+    </label>
+    <label for="gender"><span>Gender</span>
+      <span>
+      <input type="radio" name="gender" value="male"> Male<br>
+      <input type="radio" name="gender" value="female"> Female<br>
+      <input type="radio" name="gender" value="other"> Other<br>
+      </span><br><br></label>
+    <label for="email"><span>Email
+      <span class="required">*</span></span>
+      <input type="email" class="input-field" name="email" value="" />
+    </label>
+    <label for="selection"><span>Selection</span>
+      <select name="selection" class="select-field">
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+      </select>
+    </label>
+    <label><span> </span><input type="submit" value="Apply for Bail" /></label>
+  </fieldset>
+<% end -%>
+
